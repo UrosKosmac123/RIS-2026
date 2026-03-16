@@ -1,8 +1,3 @@
-"""
-Crop petri dish images to remove left/right flat edges.
-Keeps only the circular inner part.
-"""
-
 import numpy as np
 import cv2
 from pathlib import Path
@@ -11,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def crop_petri_dish(image_path, crop_percent_left=0.15, crop_percent_right=0.15, padding=10, visualize=True):
     """
-    Crop petri dish image to remove flat edges, keeping only circular part.
+    Odreže levi in desni del slike.
     
     Args:
         image_path: Path to image
@@ -19,9 +14,6 @@ def crop_petri_dish(image_path, crop_percent_left=0.15, crop_percent_right=0.15,
         crop_percent_right: Percentage to crop from right side (0.15 = 15%)
         padding: Extra pixels to include around the crop
         visualize: Show before/after
-    
-    Returns:
-        cropped_image, crop_coords
     """
     # Load image
     img = cv2.imread(str(image_path))

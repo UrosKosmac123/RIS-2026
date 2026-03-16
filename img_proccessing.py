@@ -76,7 +76,3 @@ plt.show()
 
 np.set_printoptions(threshold=np.inf)
 #print(mask)
-
-num_labels, labels = cv2.connectedComponents(mask)
-print(labels)
-print(num_labels)
