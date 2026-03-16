@@ -1,2 +1,3 @@
 # RIS-2026
-Tekmovanje RIS 2026 (z Bezjakom, slaba sej vem).
+Tekmovanje RIS 2026 (z Bezjakom, slaba sej vem). Filip says hi
+
