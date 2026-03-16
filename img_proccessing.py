@@ -69,7 +69,14 @@ def find_border(image, threshold = 30):
     
     return border_mask
 
-mask = find_border(png_path(png_name2), 7)
+mask = find_border(png_path(png_name2), 10)
 plt.imshow(mask, cmap='gray')
 plt.title("Border Mask: White=255 (border), Black=0 (background)")
 plt.show()
+
+np.set_printoptions(threshold=np.inf)
+#print(mask)
+
+num_labels, labels = cv2.connectedComponents(mask)
+print(labels)
+print(num_labels)
